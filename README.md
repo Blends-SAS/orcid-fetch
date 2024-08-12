@@ -18,17 +18,17 @@ pip install orcidfetch
 
 ###  1. Querying OpenAlex Database
 
-Process: The function first queries the OpenAlex database, a comprehensive and open catalog of scholarly authors and their works, using the author’s name.
-Result: The search returns a list of possible author matches, including their ORCID if available, along with other relevant information such as affiliations and the number of works published by each author.
+The function first queries the OpenAlex database, a comprehensive and open catalog of scholarly authors and their works, using the author’s name.
+The search returns a list of possible author matches, including their ORCID if available, along with other relevant information such as affiliations and the number of works published by each author.
 
 ### 2. Filtering Results
 
-Action: The function filters out any authors from the OpenAlex results who do not have an ORCID.
-Decision Point: If no authors with ORCIDs are found, the function returns None, indicating that no match could be made.
+The function filters out any authors from the OpenAlex results who do not have an ORCID.
+If no authors with ORCIDs are found, the function returns None, indicating that no match could be made.
 
 ### 3. Matching Using ORCID API
 
-Primary Strategy: For each author who has an ORCID in the filtered results, the function attempts to verify the match using the ORCID API. This is the most reliable method as it directly checks the ORCID database.
+For each author who has an ORCID in the filtered results, the function attempts to verify the match using the ORCID API. This is the most reliable method as it directly checks the ORCID database.
 DOI Matching: It checks if the provided DOI matches any of the works associated with the ORCID. If a match is found, the ORCID is returned with a "High" confidence level.
 Affiliation Matching: If no DOI match is found, the function checks if the provided affiliation matches any of the affiliations associated with the ORCID. If a match is found, it is returned with a "High" confidence level.
 Fallback: If neither a DOI nor an affiliation match is found, the function moves to less reliable methods.

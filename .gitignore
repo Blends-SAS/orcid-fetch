@@ -1,0 +1,10 @@
+.venv
+ORCID.ipynb
+main.py
+.eggs
+.pytest_cache
+/blends_orcid.egg-info
+blendsorcid/__pycache__
+tests/__pycache__
+/nathanael_tests
+/dist

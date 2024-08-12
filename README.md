@@ -1,10 +1,11 @@
 # Overview
 
-This Python package is designed to retrieve the ORCID (Open Researcher and Contributor ID) of an author by using multiple methods to ensure accuracy. It takes the author's name, a DOI (Digital Object Identifier) of a publication, and optionally the author's affiliation, to increase the chances of finding the correct ORCID. The program first attempts to match the provided details with records in the OpenAlex database, where it looks for ORCID information linked to the author. If multiple matches are found, it further refines the search by comparing details such as the author's co-authors and affiliations to find the best match.
+This Python package is designed to retrieve the ORCID (Open Researcher and Contributor ID) of an author by using multiple methods to ensure accuracy. It takes the author's full name
+and optionally a DOI (Digital Object Identifier) of a publication, or the author's affiliation to increase the chances of finding the correct ORCID. The program first attempts to match the provided details with records in the OpenAlex database, where it looks for ORCID information linked to the author. If multiple matches are found, it further refines the search by comparing details such as the author's co-authors and affiliations to find the best match.
 
 The program employs a step-by-step approach, starting with the most reliable matching method (like directly matching a DOI) and proceeding to less direct methods if needed. The program assigns a confidence level to the match (e.g., "High," "Medium," or "Low") and reports the method used to achieve the result. This layered approach ensures that even if the most straightforward matching methods fail, the program can still provide a reliable ORCID based on other available information.
 
-Right now, the program matches the author to his ORCID with a success rate of 77%. Among this matches more than 70%  are high confidence matches.
+Right now, the program matches the author to his ORCID with a success rate of 77%. Among this matches more than 70%  are high confidence matches. It is hightly advised to always provide a DOI and a affiliation in order to increase the changes of finding the right ORCID with the most realiable methods.
 
 # Instalation guide
 

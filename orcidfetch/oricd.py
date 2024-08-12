@@ -407,3 +407,12 @@ class Orcid:
         )
 
 
+
+
+
+# TEST FUNCTION FOR PIP
+
+
+def test_function():
+
+    return 'Function imported'

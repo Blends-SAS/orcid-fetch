@@ -9,7 +9,7 @@ Note: The reliability of the search is greatly increased by providing a DOI and 
 
 
 ```
-from NAME_OF_THE_PACKAGE import Orcid
+from orcidfetch import Orcid
 
 # Initialize with author name and additional information
 results = Orcid(

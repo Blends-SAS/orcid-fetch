@@ -1,0 +1,4 @@
+requests
+pyalex
+crossrefapi
+Unidecode

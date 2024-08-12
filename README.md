@@ -9,7 +9,7 @@ Right now, the program matches the author to his ORCID with a success rate of 77
 
 # Instalation guide
 
-This package is avaliable in PyPI. You can easily install it by running
+This package is avaliable in PyPI [https://pypi.org/project/orcidfetch/](https://pypi.org/project/orcidfetch/). You can easily install it by running
 
 ```
 pip install orcidfetch

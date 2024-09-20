@@ -1,6 +1,7 @@
 from typing import List, Dict, Any, Optional
 from pyalex import Authors
 import os
+
 import time
 import requests
 from typing import List, Dict, Optional
@@ -11,29 +12,20 @@ import time
 from unidecode import unidecode
 import logging
 
-
-import logging
-
 # Set the logging level to DEBUG
 logging.basicConfig(level=logging.INFO)
 
-
+import dotenv
+dotenv.load_dotenv()
+ACCESS_TOKEN = str(os.getenv("ACCESS_TOKEN"))
+REFRESH_TOKEN = str(os.getenv("REFRESH_TOKEN"))
 # MEMBER TOKEN
-auth = {'access_token': 'e2e455e1-8fc3-4fbf-aad5-9b7d8891e7dc',
+auth = {'access_token': ACCESS_TOKEN,
  'token_type': 'bearer',
- 'refresh_token': 'a63b7578-d587-46b8-9019-85fb2a8eb52b',
+ 'refresh_token': REFRESH_TOKEN,
  'expires_in': 631138518,
  'scope': '/read-public',
  'orcid': None}
-
-
-# PUBLIC TOKEN
-# auth = {'access_token': '791c6a8a-f2f4-4d75-a932-59826063c71b',
-#  'token_type': 'bearer',
-#  'refresh_token': '674dcb57-1e6d-4ad5-b3ec-c440ac86cf51',
-#  'expires_in': 631138518,
-#  'scope': '/read-public',
-#  'orcid': None}
 
 
 # Fetch works of a record

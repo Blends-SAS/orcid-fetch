@@ -8,3 +8,4 @@ blendsorcid/__pycache__
 tests/__pycache__
 /nathanael_tests
 /dist
+orcid-fetch/orcidfetch/.env
